@@ -1,0 +1,17 @@
+new
+name 태평옥
+img https://www.google.com/maps/uv?pb=!1s0x357ca2e56359d96f%3A0xbe900b24e16ce083!15sCgIYIQ&viewerState=lb&sa=X&ved=2ahUKEwiZzqP4l62GAxVoSPUHHbclBN4QzeMEegQIAxAA#
+img https://lh3.googleusercontent.com/p/AF1QipNQbT93i5jcFXIoUHAwT0kU1Rp6PLqW00teAb6J=s680-w680-h510
+img https://lh3.googleusercontent.com/p/AF1QipO6OrNzZV3rO6T7C9VFmi2_a-G2nlHIZBsIL5aL=s680-w680-h510
+minPrice 10000
+maxPrice 20000
+distance 200
+star 4.1
+new
+name 태평옥2
+img https://www.google.com/maps/uv?pb=!1s0x357ca2e56359d96f%3A0xbe900b24e16ce083!15sCgIYIQ&viewerState=lb&sa=X&ved=2ahUKEwiZzqP4l62GAxVoSPUHHbclBN4QzeMEegQIAxAA#
+img https://lh3.googleusercontent.com/p/AF1QipNQbT93i5jcFXIoUHAwT0kU1Rp6PLqW00teAb6J=s680-w680-h510
+minPrice 10000
+maxPrice 20000
+distance 200
+star 4.3

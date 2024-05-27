@@ -31,6 +31,7 @@ public class StaticFileReadHttpHandler implements HttpHandler {
 			responseData.append(str);
 		}
 		HttpResponseDto dto = new HttpResponseDto(responseData.toString());
+		br.close();
 		return dto;
 	}
 
