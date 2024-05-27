@@ -42,9 +42,22 @@ public class WebSocket {
 					HttpRequestDto requestDto = new HttpRequestDto(requestData.toString());
 					Dispatcher dispatcher = new Dispatcher();
 					HttpHandler handler = dispatcher.dispatch(requestDto);
-					HttpResponseDto responseDto = handler.handle();
+					HttpResponseDto responseDto = null;
+					if(handler != null) {
+						responseDto = handler.handle();
+					} else {
+						System.out.println("적절한 handler 를 찾지 못했습니다.");
+					}
 					out = client.getOutputStream();
-					out.write(responseDto.getResponseData().getBytes());
+					if(responseDto != null) {
+						out.write(responseDto.getResponseData().getBytes());
+					} else {
+						StringBuilder responseData = new StringBuilder();
+						responseData.append("HTTP/1.1 200 OK\r\n");
+						responseData.append("Server: \r\n");
+						responseData.append("\r\n\r\n");
+						out.write(responseData.toString().getBytes());
+					}
 				} catch(IOException e) {
 					e.printStackTrace();
 				} catch(Exception e) {

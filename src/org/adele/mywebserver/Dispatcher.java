@@ -9,10 +9,13 @@ public class Dispatcher {
 	public HttpHandler dispatch(HttpRequestDto requestDto) throws Exception {
 		String method = requestDto.getMethod();
 		String requestUrl = requestDto.getRequestUrl();
+		System.out.println("Dispatcher method: " + method + " requestUrl: "+ requestUrl);
 		if(method.equals("GET")) {
 			if(requestUrl.equals("/")) {
 				// root
-				return new FileReadHttpHandler(200,"index.html");
+				return new StaticFileReadHttpHandler(200,"static/index.html");
+			} else if(requestUrl.startsWith("/static")) {
+				return new StaticFileReadHttpHandler(200, requestUrl.substring(1));
 			}
 		} else {
 			throw new Exception("지원하지 않는 메소드");
