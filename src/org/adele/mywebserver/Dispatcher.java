@@ -13,7 +13,7 @@ public class Dispatcher {
 		if(method.equals("GET")) {
 			if(requestUrl.equals("/")) {
 				// root
-				return new StaticFileReadHttpHandler(200,"static/index.html");
+				return new IndexHttpHandler(200,"static/index.html");
 			} else if(requestUrl.startsWith("/static")) {
 				return new StaticFileReadHttpHandler(200, requestUrl.substring(1));
 			}

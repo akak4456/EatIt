@@ -30,9 +30,14 @@ public class StaticFileReadHttpHandler implements HttpHandler {
 			if(str == null) break;
 			responseData.append(str);
 		}
-		HttpResponseDto dto = new HttpResponseDto(responseData.toString());
+		String originResponseData = responseData.toString();
+		HttpResponseDto dto = new HttpResponseDto(parseSpecialResponseData(originResponseData));
 		br.close();
 		return dto;
+	}
+	
+	public String parseSpecialResponseData(String originResponseData) {
+		return originResponseData;
 	}
 
 }
